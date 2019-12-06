@@ -24,10 +24,17 @@ void student::addGrade(double gradeInput)
 
 double student::getScore()
 {
-    double sum = 0.0;
-    for(int index = 0; index<grades.size(); index++)
+    if(grades.size() > 0)
     {
-        sum += grades[index];
+        double sum = 0.0;
+        for(int index = 0; index<grades.size(); index++)
+        {
+            sum += grades[index];
+        }
+        return sum/grades.size();
     }
-    return sum/grades.size();
+    else
+    {
+        return 0;
+    }
 }

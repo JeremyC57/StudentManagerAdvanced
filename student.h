@@ -7,8 +7,8 @@ using namespace std;
 
 class student
 {
-    private: string firstName;
-             string lastName;
+    private: string firstName = "";
+             string lastName = "";
              vector<double> grades;
              double score;
 
